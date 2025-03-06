@@ -3,38 +3,43 @@
 
 // Desafio de Xadrez - MateCheck
 
-int main() {
+int main()
+{
 
-     // Entrada das variaveis
-     int t, b, r, opcao; 
+    // Entrada das variaveis
+    int t, b = 0, r = 0, opcao;
 
-     // Movimento da Torre (5 casas para a direita) usando for
-     printf("Movimento da Torre: \n");
-     for(t = 0; t <= 5; t++) {
-         printf("Direita\n");
-     }
- 
-     printf("\n");
- 
-     // Movimento do Bispo (5 casas na diagonal para cima e à direita) usando while
-     printf("Movimento do Bispo: \n");
-     while (b < 5)
-     {
-         printf("Cima, Direita\n");
-         b++;
-     }
- 
-     printf("\n");
- 
-     // Movimento da Rainha (8 casas para a esquerda) usando do-while
-     printf("Movimento da Rainha: \n");
-     do {
-         printf("Esquerda\n");
-         r++;
-     } while (r < 8);
+    // Movimento da Torre (5 casas para a direita) usando for
+    printf("Movimento da Torre: \n");
+    for (t = 0; t <= 5; t++)
+    {
+        printf("Direita\n");
+    }
+    printf("-----------------------------\n");
+    printf("\n");
 
-    // Menu interativo para perguntar a movimentação do cavalo   
-    printf("*** Movimentação Cavalo ***\n");
+    // Movimento do Bispo (5 casas na diagonal para cima e à direita) usando while
+    printf("Movimento do Bispo: \n");
+    while (b < 5)
+    {
+        printf("Cima, Direita\n");
+        b++;
+    }
+    printf("-----------------------------\n");
+    printf("\n");
+
+    // Movimento da Rainha (8 casas para a esquerda) usando do-while
+    printf("Movimento da Rainha: \n");
+    do
+    {
+        printf("Esquerda\n");
+        r++;
+    } while (r < 8);
+    printf("-----------------------------\n");
+    printf("\n");
+
+    // Menu interativo para perguntar a movimentação do cavalo
+    printf("*** Movimento Cavalo ***\n");
     printf("1 - Cima-Direta\n");
     printf("2 - Cima-Esquerda\n");
     printf("3 - Baixo-Direta\n");
@@ -42,7 +47,6 @@ int main() {
     printf("Opcao: ");
     scanf("%d", &opcao);
     printf("\n");
-
 
     switch (opcao)
     {
@@ -76,18 +80,15 @@ int main() {
 
     case 3:
         // Nesse case o cavalo vai fazer o movimento pra baixo e direita
-        int i = 1, j = 1;
 
-        while (i <= 1)
+        for (int i = 1; i <= 1; i++)
         {
             printf("Baixo\n");
             printf("Baixo\n");
-            do
+            for (int j = 1; j <= 1; j++)
             {
                 printf("Direita\n");
-                j++;
-            } while (j <= 1);
-            i++;
+            }
         }
         printf("-----------------------------\n");
         break;
